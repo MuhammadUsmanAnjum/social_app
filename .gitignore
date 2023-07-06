@@ -1,0 +1,7 @@
+.env
+*/__pycache__
+post_files
+users/api/v1/__pycache__
+users/migrations/__pycache__
+posts/api/v1/__pycache__
+posts/migrations/__pycache__
