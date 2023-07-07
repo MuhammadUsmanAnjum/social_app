@@ -7,7 +7,7 @@ Social App with custom user model with JWT authentication. User can add Posts al
 
 
 ### POSTMAN Collection
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/26126281-e9814d88-6100-4414-89db-05c91da6c41b?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D26126281-e9814d88-6100-4414-89db-05c91da6c41b%26entityType%3Dcollection%26workspaceId%3D4a92c9cf-fba0-4c18-8969-df6d4f821c2d)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/26126281/2s93zGzdrF)
 
 # How to Run?
 - Create a Virtual Environment
