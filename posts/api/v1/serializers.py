@@ -1,4 +1,4 @@
-from posts.models import Post, PostFiles
+from posts.models import Post, PostFiles, Like
 from rest_framework import serializers
 from users.api.v1.serializers import UserSerializer
 
@@ -35,3 +35,9 @@ class PostCreateSerializer(serializers.ModelSerializer):
             post_files.append(PostFiles(post=post, file=file))
         PostFiles.objects.bulk_create(post_files)
         return post
+    
+    
+class LikeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Like
+        fields = '__all__'
