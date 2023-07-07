@@ -14,3 +14,9 @@ class Post(models.Model):
 class PostFiles(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="files")
     file = models.FileField(upload_to="post_files/")
+    
+    
+class Like(models.Model):
+    liked_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    liked_post_id = models.IntegerField()
+    
