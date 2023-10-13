@@ -13,6 +13,18 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import environ
 import os
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://56201d8459e4d0503ac2a9ac474887ae@o4506044240560128.ingest.sentry.io/4506044242460672",
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    traces_sample_rate=1.0,
+    # Set profiles_sample_rate to 1.0 to profile 100%
+    # of sampled transactions.
+    # We recommend adjusting this value in production.
+    profiles_sample_rate=1.0,
+)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -59,6 +71,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'posts.middleware.SentryAPIMiddleware',
 ]
 
 ROOT_URLCONF = 'social_app_project.urls'
