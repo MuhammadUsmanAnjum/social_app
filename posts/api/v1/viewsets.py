@@ -11,7 +11,7 @@ from users.api.v1.serializers import UserSerializer
 
 class PostViewSet(ModelViewSet):
     http_method_names = ["get", "post", "delete"]
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     queryset = Post.objects.all()
 
     
